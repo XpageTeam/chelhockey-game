@@ -41,18 +41,29 @@ $output-bourbon-deprecation-warnings: false;
 		z-index: 2
 
 @media screen and (max-height: 720px)
-	.game-interface
-		// margin-bottom: 40px
+
+	.edit__submit
+		flex: none
+
+	.profile
+		.edit__submit
+			.arrow-btn
+				height: 46px
+				padding: 0
+
+	.edit__input-cont
+		.edit__input-cont
+			margin-bottom: 0
 
 	.edit__input
 
 		&-cont
-			margin-bottom: 15px
+			margin-bottom: 10px
 
 	.default
 
 		&__label
-			margin-bottom: 7px
+			margin-bottom: 4px
 
 	.auth
 		align-items: flex-start
@@ -330,10 +341,13 @@ $output-bourbon-deprecation-warnings: false;
 		max-width: 216px
 		margin: 0 auto
 
+	.edit__input-cont
+		flex: none
+
 	.game
 
 		.game-interface__top
-			padding: 35px 16px
+			padding: 25px 16px 0
 
 		.game-menu
 			width: auto
@@ -405,21 +419,9 @@ $output-bourbon-deprecation-warnings: false;
 
 		&__list
 
-			table, tbody, td
-				// display: block
 
-			tr
-				// position: relative
-				// display: flex
-				// align-items: center
-				// flex-direction: column
-				// padding: 0 18px
-
-			td
-				// position: static
 
 			.player
-				// flex-direction: column
 
 				&__name
 					margin: 0 0 0 10px
@@ -427,19 +429,6 @@ $output-bourbon-deprecation-warnings: false;
 					span
 						display: block
 
-	// .player-place
-		
-	// 	&__number
-	// 		padding: 0 18px
-
-	// 		span
-	// 			margin: 0 5px 1px
-
-	// 			&:before
-	// 				font-size: rem(18)
-
-	// 		&:before, &:after
-	// 			width: 10px
 
 	.red-btn, .white-btn, .green-btn
 		margin: 0 0 15px 0
@@ -722,6 +711,9 @@ $output-bourbon-deprecation-warnings: false;
 
 
 @media screen and (max-width: 660px) and (orientation: portrait)
+
+
+
 	.wrapper
 		max-width: 480px
 
@@ -765,7 +757,7 @@ $output-bourbon-deprecation-warnings: false;
 		justify-content: center
 
 		&__photo
-			+size(110px)
+			+size(80px)
 
 		&__name
 			margin-left: rem(60)
@@ -834,7 +826,7 @@ $output-bourbon-deprecation-warnings: false;
 		min-height: 0
 
 	.rating-place
-		+size(56px)
+		+size(40px)
 		right: -15px
 
 	.profile
@@ -842,7 +834,7 @@ $output-bourbon-deprecation-warnings: false;
 		.player
 
 			&__photo
-				+size(120px)
+				+size(80px)
 
 				&:after
 					right: -15px
@@ -865,7 +857,7 @@ $output-bourbon-deprecation-warnings: false;
 
 	.file-input, .default-input
 		border-radius: 5px !important
-		height: 56px
+		height: 46px
 
 	.rating
 		.player
@@ -917,16 +909,15 @@ $output-bourbon-deprecation-warnings: false;
 			&:after
 				background: linear-gradient(to right,#5af 0,#5af 1%,rgba(85, 170, 255, 0.46) 42%,rgba(85, 170, 255, 0.03) 100%)
 
-			.loader
-				// opacity: 0
+
 
 	.game-filed
 		padding-top: 60px
 
 		&__timer
-			// position: relative
 			top: -30px !important
 			transform: translate3d(-50%, 0, 0) scale(.7) !important
+
 
 @media screen and (max-width: 840px) and (orientation: landscape)
 	html, .game__body
@@ -1011,8 +1002,6 @@ $output-bourbon-deprecation-warnings: false;
 		height: 100%
 		min-height: 0
 
-	.game-interface
-		// margin-bottom: 20px
 
 	.game-search
 		flex-direction: row
